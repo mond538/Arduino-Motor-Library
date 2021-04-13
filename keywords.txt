@@ -1,0 +1,5 @@
+motor	KEYWORD1
+MotorControl	KEYWORD2
+Init    KEYWORD3
+Count   KEYWORD4
+SpeedDetection KEYWORD5
