@@ -2,7 +2,7 @@
  * @Autor: Mond
  * @Date: 2021-04-13 22:32:13
  * @LastEditors: Mond
- * @LastEditTime: 2021-04-13 22:32:30
+ * @LastEditTime: 2021-04-13 23:17:22
  * @Description: An library for motor and its encoder
  */
 #ifndef motor_H
@@ -15,7 +15,7 @@ public:
 	long m;
 	float velocity;
 	int *pps;
-	motor(int pA, int pB, int MOTOR_S, int MOTOR_D1, int MOTOR_D2, int *mill, bool FC);
+	motor(int pA, int pB, int MOTOR_S, int MOTOR_D1, int MOTOR_D2, int *PPs, bool FC);
 	void Init();
 	void MotorControl(int sp);
 	void Count(int flag);
