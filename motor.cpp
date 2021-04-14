@@ -1,16 +1,5 @@
 #include "motor.h"
-/**
- * @description: define a motor
- * @param {int} pA: The port number that controls the direction of motor rotation -A
- * @param {int} pB: The port number that controls the direction of motor rotation -B
- * @param {int} MOTOR_S: The port number that controls the motor speed
- * @param {int} MOTOR_D1: Encoder A phase port number
- * @param {int} MOTOR_D2: Encoder B phase port number
- * @param {int} *PPs: Variable address for storing the number of encoder pulses
- * @param {bool} FC: FALLING->0; CHANGE->1; 
- * @return {*}
- */
-motor::motor(int pA, int pB, int MOTOR_S, int MOTOR_D1, int MOTOR_D2, int *PPs, bool FC)
+motor::motor(int pA, int pB, int MOTOR_S, int MOTOR_D1, int MOTOR_D2, long *PPs, bool FC)
 {
 	pinA = pA;
 	pinB = pB;
@@ -67,7 +56,7 @@ void motor::MotorControl(int sp)
 
 /**
  * @description: count the encoder
- * @usage: 
+ * usage: 
  * 	void Count()
  * 		myMotor.Count(1);
  * 	void setup()
@@ -106,7 +95,7 @@ void motor::Count(int flag)
 
 /**
  * @description: Calculate the motor speed and rotation angle
- * @usage:
+ * usage:
  * void SpeedDetection()
 	{
 	  detachInterrupt(5);

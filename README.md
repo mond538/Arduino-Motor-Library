@@ -17,7 +17,7 @@
 motor myMotor(MOTOR_A, MOTOR_B, MOTOR_PWM, MOTOR_PIN1, MOTOR_PIN2, &pps, 1))
 ```
 
-`MOTOR_A`和`MOTOR_B`分别为电机驱动板上控制方向的两根线所接端口；`MOTOR_PWM`为PWM端口；`MOTOR_PIN1`和`MOTOR_PIN2`为编码器的A相和B相；`pps`为存储编码器返回脉冲数的一个变量；最后一个参数是控制计算方式的一个变量。当为1时，编码器的精度成为原来的两倍。此时编码器计数中断应为`CHANGE`方式，为0时，则是`FALLING`方式，分辨率即为原分辨率。
+`MOTOR_A`和`MOTOR_B`分别为编码器的A相和B相；`MOTOR_PWM`为PWM端口；`MOTOR_PIN1`和`MOTOR_PIN2`为电机驱动板上控制方向的两根线所接端口；`pps`为存储编码器返回脉冲数的一个变量；最后一个参数是控制计算方式的一个变量。当为1时，编码器的精度成为原来的两倍。此时编码器计数中断应为`CHANGE`方式，为0时，则是`FALLING`方式，分辨率即为原分辨率。
 
 定义马达后，在`setup`函数里使用`myMotor.Init()`对马达进行初始化。
 
